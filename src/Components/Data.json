@@ -1,0 +1,153 @@
+
+{
+  "cars": [
+    {
+      "name": "Revuelto",
+      "hero": {
+        "video": "../assets/revuelto-vd2.mp4",
+        "title": "Tamed By No One",
+        "subtitle": "Revuelto",
+        "button": {
+          "text": "Discover More",
+          "url": "https://www.lamborghini.com/en-en/models/revuelto"
+        }
+      },
+      "specifications": {
+        "background": "black",
+        "stats": [
+          { "title": "Max Power (combined)", "value": "747", "unit": "kW" },
+          { "title": "Top Speed", "value": ">350", "unit": "km/h" },
+          { "title": "0–100 km/h", "value": "2.5", "unit": "s" }
+        ],
+        "button": {
+          "text": "Start Configuration",
+          "url": "https://www.lamborghini.com/en-en/models/revuelto/configurator"
+        },
+        "image": "../assets/front3.png"
+      },
+      "models": {
+        "title": "MODELS",
+        "subtitle": "DISCOVER ALL MODELS",
+        "link": "https://www.lamborghini.com/en-en/models",
+        "logo": "../assets/revuelto_logo2.svg",
+        "tagline": "FROM NOW ON",
+        "image": "../assets/side.webp",
+        "button": {
+          "text": "EXPLORE THE MODEL",
+          "url": "https://www.lamborghini.com/en-en/models/revuelto"
+        }
+      }
+    },
+    {
+      "name": "Temerario",
+      "hero": {
+        "video": "../assets/revuelto-vd2.mp4",
+        "title": "From the Alps to the Sea",
+        "subtitle": "Temerario",
+        "button": {
+          "text": "Discover More",
+          "url": "https://www.lamborghini.com/en-en/models/temerario"
+        }
+      },
+      "specifications": {
+        "background": "black",
+        "stats": [
+          { "title": "Max Power (combined)", "value": "677", "unit": "kW" },
+          { "title": "Top Speed", "value": "343", "unit": "km/h" },
+          { "title": "0–100 km/h", "value": "2.7", "unit": "s" }
+        ],
+        "button": {
+          "text": "Start Configuration",
+          "url": "https://www.lamborghini.com/en-en/models/temerario/configurator"
+        },
+        "image": "../assets/temerario-front.png"
+      },
+      "models": {
+        "title": "MODELS",
+        "subtitle": "DISCOVER ALL MODELS",
+        "link": "https://www.lamborghini.com/en-en/models",
+        "logo": "../assets/temerario-logo.svg",
+        "tagline": "YOU CAN'T HIDE WHO YOU ARE",
+        "image": "../assets/temerario-side.webp",
+        "button": {
+          "text": "EXPLORE THE MODEL",
+          "url": "https://www.lamborghini.com/en-en/models/temerario"
+        }
+      }
+    },
+    {
+      "name": "Urus",
+      "hero": {
+        "video": "../assets/urus-vd.mp4",
+        "title": "Born to Thrill",
+        "subtitle": "Urus",
+        "button": {
+          "text": "Discover More",
+          "url": "https://www.lamborghini.com/en-en/models/urus"
+        }
+      },
+      "specifications": {
+        "background": "black",
+        "stats": [
+          { "title": "Max Power", "value": "490", "unit": "kW" },
+          { "title": "Top Speed", "value": "305", "unit": "km/h" },
+          { "title": "0–100 km/h", "value": "3.3", "unit": "s" }
+        ],
+        "button": {
+          "text": "Start Configuration",
+          "url": "https://www.lamborghini.com/en-en/models/urus/configurator"
+        },
+        "image": "../assets/urus-front.webp"
+      },
+      "models": {
+        "title": "MODELS",
+        "subtitle": "DISCOVER ALL MODELS",
+        "link": "https://www.lamborghini.com/en-en/models",
+        "logo": "../..//assets/urus-logo.svg",
+        "tagline": "DARE TO LIVE MORE",
+        "image": "../assets/urus-side.webp",
+        "button": {
+          "text": "EXPLORE THE MODEL",
+          "url": "https://www.lamborghini.com/en-en/models/urus"
+        }
+      }
+    },
+    {
+      "name": "Huracán",
+      "hero": {
+        "video": "../assets/huracan-vd.mp4",
+        "title": "Pure Emotion",
+        "subtitle": "Huracán",
+        "button": {
+          "text": "Discover More",
+          "url": "https://www.lamborghini.com/en-en/models/huracan"
+        }
+      },
+      "specifications": {
+        "background": "black",
+        "stats": [
+          { "title": "Max Power", "value": "470", "unit": "kW" },
+          { "title": "Top Speed", "value": "325", "unit": "km/h" },
+          { "title": "0–100 km/h", "value": "2.9", "unit": "s" }
+        ],
+        "button": {
+          "text": "Start Configuration",
+          "url": "https://www.lamborghini.com/en-en/models/huracan/configurator"
+        },
+        "image": "../assets/huracan-front.png"
+      },
+      "models": {
+        "title": "MODELS",
+        "subtitle": "DISCOVER ALL MODELS",
+        "link": "https://www.lamborghini.com/en-en/models",
+        "logo": "../assets/huracan-logo.svg",
+        "tagline": "BEYOND THE CONCRETE",
+        "image": "../assets/huracan-side.webp",
+        "button": {
+          "text": "EXPLORE THE MODEL",
+          "url": "https://www.lamborghini.com/en-en/models/huracan"
+        }
+      }
+    }
+  ]
+}
