@@ -1,32 +1,193 @@
 import { useState, useRef } from "react";
 import Header from "./Header";
-import data from "./Data.json";
 
+// ✅ Importlar
+import revueltoF from '../assets/revuelto-front.png';
+import revueltoL from '../assets/revuelto-logo2.svg';
+import revueltoS from '../assets/revuelto-side.webp';
+import revueltoV from '../assets/revuelto-vd2.mp4';
 
-// Helper to resolve asset paths for Vite
-const resolveAsset = (path) => {
-  if (path.startsWith('http')) return path;
-  return new URL(path, import.meta.url).href;
-};
+import temerarioF from '../assets/temerario-front.png';
+import temerarioL from '../assets/temerario-logo.svg';
+import temerarioS from '../assets/temerario-side.webp';
+import temerarioV from '../assets/revuelto-vd2.mp4';
+
+import huracanF from '../assets/huracan-front.png';
+import huracanL from '../assets/huracan-logo.svg';
+import huracanS from '../assets/huracan-side.webp';
+import huracanV from '../assets/revuelto-vd2.mp4';
+
+import urusF from '../assets/urus-front.webp';
+import urusL from '../assets/urus-logo.svg';
+import urusS from '../assets/urus-side.webp';
+import urusV from '../assets/revuelto-vd2.mp4';
+
 
 export default function HeroPage() {
-  const [activeIndex, setActiveIndex] = useState(0); 
-  const cars = data.cars;
+  const cars = [
+    {
+      name: "Revuelto",
+      hero: {
+        video: revueltoV,
+        title: "Tamed By No One",
+        subtitle: "Revuelto",
+        button: {
+          text: "Discover More",
+          url: "https://www.lamborghini.com/en-en/models/revuelto",
+        },
+      },
+      specifications: {
+        background: "black",
+        stats: [
+          { title: "Max Power (combined)", value: "747", unit: "kW" },
+          { title: "Top Speed", value: ">350", unit: "km/h" },
+          { title: "0–100 km/h", value: "2.5", unit: "s" },
+        ],
+        button: {
+          text: "Start Configuration",
+          url: "https://www.lamborghini.com/en-en/models/revuelto/configurator",
+        },
+        image: revueltoF,
+      },
+      models: {
+        title: "MODELS",
+        subtitle: "DISCOVER ALL MODELS",
+        link: "https://www.lamborghini.com/en-en/models",
+        logo: revueltoL,
+        tagline: "FROM NOW ON",
+        image: revueltoS,
+        button: {
+          text: "EXPLORE THE MODEL",
+          url: "https://www.lamborghini.com/en-en/models/revuelto",
+        },
+      },
+    },
+    {
+      name: "Temerario",
+      hero: {
+        video: temerarioV,
+        title: "From the Alps to the Sea",
+        subtitle: "Temerario",
+        button: {
+          text: "Discover More",
+          url: "https://www.lamborghini.com/en-en/models/temerario",
+        },
+      },
+      specifications: {
+        background: "black",
+        stats: [
+          { title: "Max Power (combined)", value: "677", unit: "kW" },
+          { title: "Top Speed", value: "343", unit: "km/h" },
+          { title: "0–100 km/h", value: "2.7", unit: "s" },
+        ],
+        button: {
+          text: "Start Configuration",
+          url: "https://www.lamborghini.com/en-en/models/temerario/configurator",
+        },
+        image: temerarioF,
+      },
+      models: {
+        title: "MODELS",
+        subtitle: "DISCOVER ALL MODELS",
+        link: "https://www.lamborghini.com/en-en/models",
+        logo: temerarioL,
+        tagline: "YOU CAN'T HIDE WHO YOU ARE",
+        image: temerarioS,
+        button: {
+          text: "EXPLORE THE MODEL",
+          url: "https://www.lamborghini.com/en-en/models/temerario",
+        },
+      },
+    },
+    {
+      name: "Urus",
+      hero: {
+        video: urusV,
+        title: "Born to Thrill",
+        subtitle: "Urus",
+        button: {
+          text: "Discover More",
+          url: "https://www.lamborghini.com/en-en/models/urus",
+        },
+      },
+      specifications: {
+        background: "black",
+        stats: [
+          { title: "Max Power", value: "490", unit: "kW" },
+          { title: "Top Speed", value: "305", unit: "km/h" },
+          { title: "0–100 km/h", value: "3.3", unit: "s" },
+        ],
+        button: {
+          text: "Start Configuration",
+          url: "https://www.lamborghini.com/en-en/models/urus/configurator",
+        },
+        image: urusF,
+      },
+      models: {
+        title: "MODELS",
+        subtitle: "DISCOVER ALL MODELS",
+        link: "https://www.lamborghini.com/en-en/models",
+        logo: urusL,
+        tagline: "DARE TO LIVE MORE",
+        image: urusS,
+        button: {
+          text: "EXPLORE THE MODEL",
+          url: "https://www.lamborghini.com/en-en/models/urus",
+        },
+      },
+    },
+    {
+      name: "Huracán",
+      hero: {
+        video: huracanV,
+        title: "Pure Emotion",
+        subtitle: "Huracán",
+        button: {
+          text: "Discover More",
+          url: "https://www.lamborghini.com/en-en/models/huracan",
+        },
+      },
+      specifications: {
+        background: "black",
+        stats: [
+          { title: "Max Power", value: "470", unit: "kW" },
+          { title: "Top Speed", value: "325", unit: "km/h" },
+          { title: "0–100 km/h", value: "2.9", unit: "s" },
+        ],
+        button: {
+          text: "Start Configuration",
+          url: "https://www.lamborghini.com/en-en/models/huracan/configurator",
+        },
+        image: huracanF,
+      },
+      models: {
+        title: "MODELS",
+        subtitle: "DISCOVER ALL MODELS",
+        link: "https://www.lamborghini.com/en-en/models",
+        logo: huracanL,
+        tagline: "BEYOND THE CONCRETE",
+        image: huracanS,
+        button: {
+          text: "EXPLORE THE MODEL",
+          url: "https://www.lamborghini.com/en-en/models/huracan",
+        },
+      },
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
   const activeCar = cars[activeIndex];
   const carouselRef = useRef(null);
 
   const next = () => setActiveIndex((prev) => (prev + 1) % cars.length);
   const prev = () => setActiveIndex((prev) => (prev - 1 + cars.length) % cars.length);
-
-  const handleSelectCar = (index) => {
-    setActiveIndex(index);
-  };
+  const handleSelectCar = (index) => setActiveIndex(index);
 
   return (
     <>
       <section className="relative w-full h-screen overflow-hidden">
         <video
-          src={resolveAsset(activeCar.hero.video)}
+          src={activeCar.hero.video}
           autoPlay
           loop
           muted
@@ -42,7 +203,7 @@ export default function HeroPage() {
             {activeCar.hero.subtitle}
           </p>
           <h1
-            className="text-[85px] md:text-[93px] font-extrabold uppercase leading-[1.1] tracking-tight"
+            className="text-[110px] font-extrabold uppercase leading-[1.1] tracking-tight w-140"
             style={{ fontFamily: `'Oswald', 'Bebas Neue', 'Anton', sans-serif` }}
           >
             {activeCar.hero.title}
@@ -61,7 +222,9 @@ export default function HeroPage() {
         <Header cars={cars} onSelectCar={handleSelectCar} />
       </section>
 
-      <section className={`w-full py-[80px] md:py-[120px] flex items-center justify-center bg-${activeCar.specifications.background}`}>
+      <section
+        className={`w-full py-[80px] md:py-[120px] flex items-center justify-center bg-${activeCar.specifications.background}`}
+      >
         <div className="max-w-[85%] w-full flex flex-col md:flex-row items-center justify-between text-white gap-12">
           <div className="flex flex-col items-center md:items-start gap-12">
             {activeCar.specifications.stats.map((stat, i) => (
@@ -78,7 +241,7 @@ export default function HeroPage() {
             </a>
           </div>
           <img
-            src={resolveAsset(activeCar.specifications.image)}
+            src={activeCar.specifications.image}
             alt={`${activeCar.name} front`}
             className="w-[700px] md:w-[700px] lg:w-[900px] object-contain"
           />
@@ -107,14 +270,14 @@ export default function HeroPage() {
           >
             {cars.map((car, index) => (
               <div key={`${car.name}-${index}`} className="flex-shrink-0 w-full flex flex-col items-center">
-                <img className="my-5" src={resolveAsset(car.models.logo)} alt="" />
+                <img className="my-5" src={car.models.logo} alt={`${car.name} logo`} />
                 <p
                   className="text-[85px] my-5 font-extrabold uppercase leading-[1.1] tracking-tight"
                   style={{ fontFamily: `'Oswald', 'Bebas Neue', 'Anton', sans-serif` }}
                 >
                   {car.models.tagline.toUpperCase()}
                 </p>
-                <img src={resolveAsset(car.models.image)} alt={car.name} className="w-[70%] object-contain transition-transform duration-500" />
+                <img src={car.models.image} alt={car.name} className="w-[70%] object-contain transition-transform duration-500" />
                 <a
                   href={car.models.button.url}
                   target="_blank"

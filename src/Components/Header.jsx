@@ -1,14 +1,8 @@
 import { useState, useEffect } from "react";
 import search2 from "../assets/search2.svg";
 import hamburger from "../assets/hamburger.svg";
+import logo from '../assets/logo.svg'
 
-export const logo = 'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/logos/2024/03_26/logo_header_01.svg';
-
-// Helper to resolve asset paths for Vite
-const resolveAsset = (path) => {
-  if (path.startsWith('http')) return path;
-  return new URL(path, import.meta.url).href;
-};
 
 export default function Header({ cars, onSelectCar }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +62,7 @@ export default function Header({ cars, onSelectCar }) {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <img src={resolveAsset(car.models.image)} alt={car.name} className="w-108 object-contain" />
+              <img src={(car.models.image)} alt={car.name} className="w-108 object-contain" />
               <p className="text-white text-3xl mt-3 uppercase font-bold">{car.name}</p>
             </li>
           ))}
